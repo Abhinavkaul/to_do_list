@@ -78,6 +78,9 @@ ul {
     font-size: 20px;
     color: white;
 }
+.fa-solid{
+    color: #2e933c;
+}
 
 .fa-trash {
     font-size: 15px;

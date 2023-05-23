@@ -51,6 +51,12 @@ function App() {
     setListItems(updatedlist);
   }
 
+  const setIsDone = (index,val) => {
+    const updatedlist = [...listItems]
+    updatedlist[index].isDone = !val;
+    setListItems(updatedlist);
+  }
+
   return (
     <div>
       <h2>To Do List</h2>
@@ -68,7 +74,7 @@ function App() {
         {listItems.map((item, index) => (
           <li className="li" key={index}>
 
-            <i className='fa fa-circle-o'></i>
+            <i className={item.isDone ? 'fa-solid fa-circle-check': 'fa fa-circle-o'} onClick={() => setIsDone(index,item.isDone)}></i>
 
             {item.editMode ?
               <input type='text' defaultValue={item.value} onChange={(e) => editList(index, e)} />
