@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #212529;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+    color: #2e933c;
+    text-align: center;
+    margin: 20px 0px 30px 0px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    color: #909590;
+    text-align: center;
+    margin: 20px 0px 30px 0px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* Input from user */
+/* div */
+.input {
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    /* background-color: aqua; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    width: 60vw;
+    height: 43px;
+    margin: 10px;
+    padding: 0px 10px;
+}
+
+/* input from user ends */
+
+
+/* buttons +add and clear */
+.add {
+    height: 45px;
+    padding: 10px;
+    background-color: #2e933c;
+    border: none;
+    color: white;
+}
+
+/* buttons +add and clear ends */
+
+ul {
+    margin: 20px 50px;
+    /* border: 2px solid white; */
+
+}
+
+.li {
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 20px auto;
+    width: 70vw;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.fa {
+    font-size: 20px;
+    color: white;
+}
+
+.fa-trash {
+    font-size: 15px;
+    color: red;
+    margin-right: 10px;
+    /* margin-bottom: 0px; */
+}
+
+.fa-edit{
+    font-size: 15px;
+    color: white;
+}
+.iconcontainer{
+    display: flex;
+    align-items: center;
+ }
+.line-through {
+    text-decoration: line-through;
+    color: darkgrey;
 }
