@@ -4,6 +4,9 @@ function App() {
 
   const [inp, setinp] = useState('');
   const [listItems, setListItems] = useState([]);
+  // const [inLine, setInLine] = useState(false)
+  const currentDate = new Date();
+  const formattedDate = currentDate.toDateString();
 
 
   const makeinput = (s) => {
@@ -16,7 +19,7 @@ function App() {
       {
         'value': inp,
         'editMode': false,
-        'isDone' : false
+        'isDone': false
       }]);
       setinp('');
     }
@@ -43,24 +46,24 @@ function App() {
     const updatedlist = [...listItems]
     updatedlist[index].value = e.target.value;
     setListItems(updatedlist);
-  }
+  };
 
-  const setEditMode = (index,val) => {
+  const setEditMode = (index, val) => {
     const updatedlist = [...listItems]
     updatedlist[index].editMode = !val;
     setListItems(updatedlist);
-  }
+  };
 
-  const setIsDone = (index,val) => {
+  const setIsDone = (index, val) => {
     const updatedlist = [...listItems]
     updatedlist[index].isDone = !val;
     setListItems(updatedlist);
-  }
+  };
 
   return (
     <div>
       <h2>To Do List</h2>
-      <h1 className="date"></h1>
+      <h1 className="date">{formattedDate}</h1>
       <div className="input">
 
         <input type="text" placeholder="Add a To-Do" onChange={(e) => makeinput(e)} onKeyDown={(e) => keyenter(e)} value={inp} />
@@ -74,16 +77,16 @@ function App() {
         {listItems.map((item, index) => (
           <li className="li" key={index}>
 
-            <i className={item.isDone ? 'fa-solid fa-circle-check': 'fa fa-circle-o'} onClick={() => setIsDone(index,item.isDone)}></i>
+            <i className={item.isDone ? 'fa-solid fa-circle-check' : 'fa fa-circle-o'} onClick={() => setIsDone(index, item.isDone)}></i>
 
             {item.editMode ?
               <input type='text' defaultValue={item.value} onChange={(e) => editList(index, e)} />
               :
-              <p>{item.value}</p>}
+              <p className={item.isDone ? 'line-through' : ''}>{item.value}</p>}
 
             <div className='iconcontainer'>
               <i className="fa-solid fa-trash" onClick={() => deleteList(index)}></i>
-              <i className='fas fa-edit' onClick={() => setEditMode(index,item.editMode)}></i>
+              <i className='fas fa-edit' onClick={() => setEditMode(index, item.editMode)}></i>
             </div>
           </li>
         ))}
