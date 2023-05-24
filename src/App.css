@@ -50,8 +50,12 @@ input {
     border: none;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
-
+.add:active {
+    background-color: #ccc;
+    transform: scale(0.9);
+  }
 
 
 ul {
@@ -104,6 +108,11 @@ ul {
     color: red;
     margin-left: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.fa-trash:active{
+    background-color: #ccc;
+    transform: scale(0.9);
 }
 
 /* edit icon */
@@ -112,6 +121,11 @@ ul {
     color: white;
     margin-left: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.fa-edit:active{
+    background-color: skyblue;
+    transform: scale(0.9);
 }
 
 /* arrow icons */
@@ -120,6 +134,11 @@ ul {
     color: white;
     margin-left: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.fa-arrow-down:active,.fa-arrow-up:active{
+    background-color: skyblue;
+    transform: scale(0.9);
 }
 
 /* container in which delete, edit, up-arrow and down-arrow icons are present */
