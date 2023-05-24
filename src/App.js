@@ -4,7 +4,6 @@ function App() {
 
   const [inp, setinp] = useState('');
   const [listItems, setListItems] = useState([]);
-  // const [inLine, setInLine] = useState(false)
   const currentDate = new Date();
   const formattedDate = currentDate.toDateString();
 
