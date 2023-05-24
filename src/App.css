@@ -58,6 +58,7 @@ ul {
 
 }
 
+/* list */
 .li {
     color: white;
     list-style-type: none;
@@ -74,11 +75,24 @@ ul {
     overflow: auto;
 }
 
+/* circle icon */
 .fa {
     font-size: 20px;
     color: white;
 }
 
+/* circle check icon */
+.fa-solid {
+    color: #2e933c;
+}
+
+/* line through */
+.line-through {
+    text-decoration: line-through;
+    color: darkgrey;
+}
+
+/* delete icon */
 .fa-trash {
     font-size: 15px;
     color: red;
@@ -86,15 +100,15 @@ ul {
     /* margin-bottom: 0px; */
 }
 
-.fa-edit{
+/* edit icon */
+.fa-edit {
     font-size: 15px;
     color: white;
 }
-.iconcontainer{
+
+
+/* container in which delete and edit icons are present */
+.iconcontainer {
     display: flex;
     align-items: center;
- }
-.line-through {
-    text-decoration: line-through;
-    color: darkgrey;
 }
