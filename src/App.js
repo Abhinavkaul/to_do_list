@@ -4,7 +4,6 @@ function App() {
 
   const [inp, setinp] = useState('');
   const [listItems, setListItems] = useState([]);
-  // const [inLine, setInLine] = useState(false)
   const currentDate = new Date();
   const formattedDate = currentDate.toDateString();
 
@@ -60,6 +59,22 @@ function App() {
     setListItems(updatedlist);
   };
 
+  const moveUp = (index) =>{
+    const updatedlist = [...listItems]
+    let a = updatedlist[index]
+    updatedlist[index] = updatedlist[index-1]
+    updatedlist[index-1]=a
+    setListItems(updatedlist);
+  }
+
+  const moveDown = (index) =>{
+    const updatedlist = [...listItems]
+    let a = updatedlist[index]
+    updatedlist[index] = updatedlist[index+1]
+    updatedlist[index+1]=a
+    setListItems(updatedlist);
+  }
+
   return (
     <div>
       <h2>To Do List</h2>
@@ -68,7 +83,7 @@ function App() {
 
         <input type="text" placeholder="Add a To-Do" onChange={(e) => makeinput(e)} onKeyDown={(e) => keyenter(e)} value={inp} />
 
-        <button className="add" onClick={() => makelist()}>+ ADD</button><br></br>
+        <button className="add" onClick={() => makelist()}>+ ADD</button><br></br><br></br>
         <button className='add' onClick={() => clearlist()}>Clear List</button>
       </div>
 
@@ -87,6 +102,8 @@ function App() {
             <div className='iconcontainer'>
               <i className="fa-solid fa-trash" onClick={() => deleteList(index)}></i>
               <i className='fas fa-edit' onClick={() => setEditMode(index, item.editMode)}></i>
+              <i className='fa-solid fa-arrow-up' onClick={() => moveUp(index)}></i>
+              <i className='fa-solid fa-arrow-down' onClick={() => moveDown(index)}></i>
             </div>
           </li>
         ))}
