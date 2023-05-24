@@ -28,17 +28,18 @@ h1 {
 .input {
     text-align: center;
     margin: 20px 20px 20px 20px;
-    /* background-color: aqua; */
 }
 
 input {
     width: 60vw;
     height: 43px;
-    margin: 10px;
+    margin: 10px 10px 0px 10px;
     padding: 0px 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
 }
 
-/* input from user ends */
+
 
 
 /* buttons +add and clear */
@@ -48,14 +49,13 @@ input {
     background-color: #2e933c;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
-/* buttons +add and clear ends */
+
 
 ul {
     margin: 20px 50px;
-    /* border: 2px solid white; */
-
 }
 
 /* list */
@@ -76,38 +76,53 @@ ul {
 }
 
 /* circle icon */
-.fa {
+.fa-circle-o {
+    margin-right: 10px;
     font-size: 20px;
     color: white;
+    cursor: pointer;
 }
 
 /* circle check icon */
-.fa-solid {
+.fa-circle-check {
+    margin-right: 10px;
+    font-size: 20px;
     color: #2e933c;
+    cursor: pointer;
 }
 
 /* line through */
 .line-through {
     text-decoration: line-through;
     color: darkgrey;
+    cursor: pointer;
 }
 
 /* delete icon */
 .fa-trash {
     font-size: 15px;
     color: red;
-    margin-right: 10px;
-    /* margin-bottom: 0px; */
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 /* edit icon */
 .fa-edit {
     font-size: 15px;
     color: white;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
+/* arrow icons */
+.fa-arrow-down,.fa-arrow-up{
+    font-size: 15px;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
-/* container in which delete and edit icons are present */
+/* container in which delete, edit, up-arrow and down-arrow icons are present */
 .iconcontainer {
     display: flex;
     align-items: center;
